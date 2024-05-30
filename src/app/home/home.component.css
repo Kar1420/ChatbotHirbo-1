@@ -1,0 +1,150 @@
+/* General styling for the navigation bar */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+html{
+  margin: 0%;
+}
+nav {
+  background-color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0%;
+}
+.container {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.left-menu {
+  display: flex;
+  align-items: center;
+}
+
+.right-menu {
+  display: flex;
+  align-items: center;
+  margin-right: 3%;
+}
+
+.left-menu p,
+.right-menu p {
+  color: white;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.left-menu p a,
+.right-menu p a {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 8px 0;
+  z-index: 1;
+  border-radius: 6px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left-menu,
+  .right-menu {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .left-menu p,
+  .right-menu p {
+    padding: 10px 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu.active .left-menu,
+  .menu.active .right-menu {
+    display: flex;
+  }
+
+
+}
+
+
+/* :host {
+  display: block;
+  height: 100vh;
+
+  background-color:  #004731;
+  margin: 0;
+  padding: 0;
+}
+ */
+
+ :host {
+  display: block;
+  height: 100vh; /* Asegúrate de que el componente ocupe toda la altura */
+  background-color: #004731; /* Cambia a tu color deseado */
+  background-image: url('/assets/hirbo_logotipo_logosimbolo_negativo.png'); /* Ruta a tu imagen */
+  background-repeat: no-repeat;
+  background-position: center center; /* Centra la imagen */
+  background-size: 50%; /* Ajusta el tamaño de la imagen al 50% del tamaño original */
+  margin: 0;
+  padding: 0;
+}

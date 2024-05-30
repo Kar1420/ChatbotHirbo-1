@@ -1,0 +1,35 @@
+<div class="container mt-4">
+  <div style="margin-top: 60px">
+    <div class="row">
+      <div class="col">
+        <h2>Mis Organizaciones</h2>
+      </div>
+      <div class="col-auto">
+        <!-- <button class="btn btn-primary" (click)="crearOrganizacion()"> -->
+        <!-- <i class="fas fa-plus"></i>Agregar Organización
+        </button> -->
+      </div>
+    </div>
+    <br /><br />
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Codigo Qr</th>
+          <th>Identificador</th>
+          <th>Mostrar</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (org of arrayQr; track org){
+        <tr>
+          <td>{{ org.codigo }}</td>
+          <td>{{ org.identificadorQR }}</td>
+          <td (click)="mostrarQr(org.codigo)">
+            <i class="fa-solid fa-eye"></i>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

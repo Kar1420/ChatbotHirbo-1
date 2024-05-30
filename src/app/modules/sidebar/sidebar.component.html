@@ -1,0 +1,65 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #sidenav
+    [mode]="modoBarraLateral"
+    [opened]="mostrarBarraLateral"
+  >
+    <div style="background-color:#000000 ;">
+      <h2
+      style="
+        background-color: #000000;
+        height: 40px;
+        margin-left: 20%;
+        display: flex;
+        color: white;
+      "
+    >
+    <img src="/assets/LogoPestaña.png" alt="Icono de usuario" class="icon" style=" margin-left:5%; margin-top: 2%;">
+      irbo
+    </h2>
+  </div>
+
+    <mat-nav-list>
+      <button
+        (click)="navigateViewUsers()"
+        class="hover-orange transparent-button"
+        [class.active]="isRouteActive('/listaUsuario')"
+      >
+        <i class="fas fa-home" style="margin-right: 35px"></i>
+        Agregar requisitos de trabajo
+        <!-- Mi usuarios -->
+      </button>
+      <button
+        (click)="navigateAddOrg()"
+        class="hover-orange transparent-button"
+        [class.active]="isRouteActive('/agregar-org')"
+      >
+        <i class="fas fa-home" style="margin-right: 35px"></i>
+        Agregar organización
+      </button>
+      <button
+        (click)="navigateAddQR()"
+        class="hover-orange transparent-button"
+        [class.active]="isRouteActive('/lista-qr')"
+      >
+        <i class="fas fa-home" style="margin-right: 35px"></i>
+        Agregar campañas 
+      </button>
+
+      <div class="container">
+      <button class="bottom-left-text"
+        (click)="logoutBS()"
+        class="hover-orange transparent-button"
+        [class.active]="isRouteActive('/plan')"
+      >
+        <i class="fas fa-sign-out-alt" style="margin-right: 35px"></i>
+        Cerrar sesión
+      </button>
+    </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+    <app-header></app-header>
+  </mat-sidenav-content>
+</mat-sidenav-container>
