@@ -23,35 +23,81 @@
       <button
         (click)="navigateViewUsers()"
         class="hover-orange transparent-button"
-        [class.active]="isRouteActive('/listaUsuario')"
-      >
+        [class.active]="isRouteActive('/listaUsuario')" >
         <i class="fas fa-home" style="margin-right: 35px"></i>
-        Agregar requisitos de trabajo
-        <!-- Mi usuarios -->
-      </button>
-      <button
-        (click)="navigateAddOrg()"
-        class="hover-orange transparent-button"
-        [class.active]="isRouteActive('/agregar-org')"
-      >
-        <i class="fas fa-home" style="margin-right: 35px"></i>
-        Agregar organización
-      </button>
-      <button
-        (click)="navigateAddQR()"
-        class="hover-orange transparent-button"
-        [class.active]="isRouteActive('/lista-qr')"
-      >
-        <i class="fas fa-home" style="margin-right: 35px"></i>
-        Agregar campañas 
+        Usuarios
       </button>
 
-      <div class="container">
-      <button class="bottom-left-text"
-        (click)="logoutBS()"
+
+      <button
+        (click)="navigateViewJobRequisition()"
         class="hover-orange transparent-button"
-        [class.active]="isRouteActive('/plan')"
-      >
+        [class.active]="isRouteActive('/jobrequisition')">
+        <i class="fas fa-home" style="margin-right: 35px"></i>
+        Requisitos de trabajo
+      </button>
+
+      <button
+        (click)="navigateViewCampanas()"
+        class="hover-orange transparent-button"
+        [class.active]="isRouteActive('/campanas')">
+        <i class="fas fa-home" style="margin-right: 35px"></i>
+       Campañas
+      </button>
+
+      <button
+        (click)="navigateViewCandidatos()"
+        class="hover-orange transparent-button"
+        [class.active]="isRouteActive('/candidatos')">
+        <i class="fas fa-home" style="margin-right: 35px"></i>
+       Candidatos
+      </button>
+
+      <button
+        (click)="navigateViewIndustrias()"
+        class="hover-orange transparent-button"
+        [class.active]="isRouteActive('/industrias')">
+        <i class="fas fa-home" style="margin-right: 35px"></i>
+       Industrias
+      </button>
+
+      <button
+        (click)="navigateViewInteracciones()"
+        class="hover-orange transparent-button"
+        [class.active]="isRouteActive('/interaccione')">
+        <i class="fas fa-home" style="margin-right: 35px"></i>
+       Interacciones
+      </button>
+
+      <button
+        (click)="navigateViewEntrevistas()"
+        class="hover-orange transparent-button"
+        [class.active]="isRouteActive('/entrevistas')">
+        <i class="fas fa-home" style="margin-right: 35px"></i>
+       Entrevistas
+      </button>
+
+      <button
+      (click)="navigateViewReclutadores()"
+      class="hover-orange transparent-button"
+      [class.active]="isRouteActive('/reclutadores')">
+      <i class="fas fa-home" style="margin-right: 35px"></i>
+     Reclutadores
+    </button>
+
+    <button
+        (click)="navigateViewOrganizadores()"
+        class="hover-orange transparent-button"
+        [class.active]="isRouteActive('/organizaciones')">
+        <i class="fas fa-home" style="margin-right: 35px"></i>
+       Organizaciones
+      </button>
+
+
+      <div class="container">
+      <button class="bottom-left-text" (click)="logoutBS()"
+        class="hover-orange transparent-button"
+        [class.active]="isRouteActive('/plan')">
         <i class="fas fa-sign-out-alt" style="margin-right: 35px"></i>
         Cerrar sesión
       </button>

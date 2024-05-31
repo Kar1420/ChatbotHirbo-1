@@ -9,6 +9,14 @@ import { AgregarOrgComponent } from './modules/agregar-org/agregar-org.component
 import { ListQrComponent } from './modules/list-qr/list-qr.component';
 import { HomeComponent } from './home/home.component';
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
+import { JobRequisitionComponent } from './modules/job-requisition/job-requisition.component';
+import { CampanasComponent } from './modules/campanas/campanas.component';
+import { CandidatosComponent } from './modules/candidatos/candidatos.component';
+import { IndustriasComponent } from './modules/industrias/industrias.component';
+import { InteraccionesComponent } from './modules/interacciones/interacciones.component';
+import { EntrevistasComponent } from './modules/entrevistas/entrevistas.component';
+import { ReclutadoresComponent } from './modules/reclutadores/reclutadores.component';
+import { OrganizacionesComponent } from './modules/organizaciones/organizaciones.component';
 
 
 export const routes: Routes = [
@@ -28,8 +36,14 @@ export const routes: Routes = [
     component: AdminDashboardComponent,
     children: [
       { path: 'listaUsuario', component: ListUsuarioComponent },
-      { path: 'agregar-org', component: AgregarOrgComponent },
-      { path: 'lista-qr', component: ListQrComponent },
+      { path: 'jobRequisition', component: JobRequisitionComponent},
+      { path: 'campanas', component:CampanasComponent},
+      { path: 'candidatos', component:CandidatosComponent},
+      { path: 'industrias', component:IndustriasComponent},
+      { path: 'interacciones', component:InteraccionesComponent},
+      { path: 'entrevistas', component:EntrevistasComponent},
+      { path: 'reclutadores',component:ReclutadoresComponent},
+      { path: 'organizaciones', component:OrganizacionesComponent}
 
     ],
   },
